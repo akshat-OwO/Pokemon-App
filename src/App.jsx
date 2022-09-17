@@ -1,12 +1,13 @@
-import { useState } from 'react'
-
 // custom components
 import PokeDexForm from './components/PokeDexForm';
 
 function App() {
 
   return (
-    <div className="App">
+    <div className="Dex">
+      <header>
+        <h1>Pokedex</h1>
+      </header>
       <PokeDexForm />
     </div>
   )

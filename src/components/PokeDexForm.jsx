@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PokeInfo from "./PokeInfo";
 
 const PokeDexForm = () => {
     const [name, setName] = useState('');
@@ -8,7 +9,8 @@ const PokeDexForm = () => {
         e.preventDefault();
         await fetch('https://pokeapi.co/api/v2/pokemon/' + name)
                 .then((response) => response.json())
-                .then((data) => {setPokeData(data)});
+                .then((data) => {setPokeData(data)})
+                .catch((error) => console.log(error));
     }
 
     return (
@@ -22,13 +24,7 @@ const PokeDexForm = () => {
                 value={name}
             />
             <button type="submit">Go</button>
-            {pokeData && (
-                <>
-                    <p>{pokeData.name}</p>
-                    <img src={pokeData.sprites.front_default} alt="img" />
-                    <img src={pokeData.sprites.back_default} alt="img" />
-                </>
-            )}
+            {pokeData && <PokeInfo pokeData={pokeData} />}
         </form>
     );
 }
