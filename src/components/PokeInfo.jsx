@@ -1,14 +1,25 @@
 const PokeInfo = ({pokeData}) => {
-
     const stats = pokeData.stats;
     const abilities = pokeData.abilities;
+    const types = pokeData.types;
 
     return (
         <>
-            <p>#{pokeData.order}</p>
-            <p>{pokeData.name}</p>
-            <img src={pokeData.sprites.front_default} alt="img" />
-            <img src={pokeData.sprites.back_default} alt="img" />
+            <div className="base">
+                <div className="name">
+                    <p className="order">#{pokeData.order}</p>
+                    <p>{pokeData.name}</p>
+                </div>
+                <div className="types">
+                    {types.map((type) => (
+                        <p>{type.type.name}</p>
+                    ))}
+                </div>
+            </div>
+            <div className="img">
+                <img src={pokeData.sprites.front_default} alt="img" />
+                <img src={pokeData.sprites.back_default} alt="img" />
+            </div>
             <div className="abilities">
                 {abilities.map((ability) => (
                     <p>{ability.ability.name}</p>

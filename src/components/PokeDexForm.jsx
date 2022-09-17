@@ -20,10 +20,11 @@ const PokeDexForm = () => {
                 type="text" 
                 id="name" 
                 required 
-                onInput={(e) => setName(e.target.value)}
+                onInput={(e) => setName(e.target.value.toLowerCase())}
                 value={name}
+                spellCheck="false"
             />
-            <button type="submit">Go</button>
+            <button type="submit">Go!</button>
             {pokeData && <PokeInfo pokeData={pokeData} />}
         </form>
     );

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+input, label, button {
+    font: inherit;
+    display: block;
+}
+
+.Dex {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    background-color: #ebb50c;
+    text-align: center;
+}
+header {
+    padding: 10px;
+}
+form {
+    background-color: #dc0a2d;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+form * {
+    padding: 4px;
+}
+
+form input {
+    width: 50%;
+    height: 2rem;
+    font-size: 1rem;
+    margin: 10px auto;
+    border-radius: 8px;
+    background-color: #ebb50c;
+    text-align: center;
+}
+
+button {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #dc0a2d;
+}
+
+.base {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.order {
+    font-size: 0.75rem;
+}
+
+.img {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.abilities {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.75rem;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.body * {
+    background-color: #6db8d9;
+    border-radius: 8px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.stats * {
+    background-color: #6db8d9;
+    border-radius: 8px;
+}
